@@ -1,0 +1,7 @@
+{
+  "name": "ListaPersonas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
