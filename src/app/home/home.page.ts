@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  personas: any;
+  filtro: string = '';
 
-  constructor() {}
-
+  constructor(private httpClient: HttpClient) {
+    this.personas = this.httpClient.get(
+      'https://raw.githubusercontent.com/Cr0xv5/Responsive/main/MOCK_DATA.json'
+    );
+  }
 }
